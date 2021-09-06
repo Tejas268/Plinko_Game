@@ -62,12 +62,11 @@ function draw() {
     }
     else if (i < 62) {
       push();
-      fill(random(0,255),random(0,255),random(0,255));
+      fill(rgb(random(0,255),random(0,255),random(0,255)));
       plinkos[i].display();
       pop();
     }
   }
-  //console.log(i);
    
   //display the divisions
   for (var k = 0; k < divisions.length; k++) {
