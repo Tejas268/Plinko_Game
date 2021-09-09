@@ -62,7 +62,7 @@ function draw() {
     }
     else if (i < 62) {
       push();
-      rgb(random(0,255),random(0,255),random(0,255)));
+      RGB(random(0,255),random(0,255),random(0,255)));
       plinkos[i].display();
       pop();
     }
