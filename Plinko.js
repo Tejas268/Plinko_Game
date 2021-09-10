@@ -1,10 +1,15 @@
 class Plinko {
-    constructor(x, y) {
+    constructor(x, y, red, green, blue) {
         var options = {
             restitution: 0.7,
             isStatic:true
         }
         this.r = z;
+        if(red !== undefined) {
+            this.red = red;
+            this.green = green;
+            this.blue = blue;
+        }
         this.body = Bodies.circle(x, y, this.r, options);
         
         World.add(world, this.body);
@@ -19,10 +24,15 @@ class Plinko {
         rotate(angle);
         imageMode(CENTER);
         noStroke();
-        fill("white");
+        if(currentPlinko < 63) {
+            fill("white");
+        }
+        if(this.red) {
+            fill(this.red, this.green, this.blue);
+        }
         ellipseMode(RADIUS);
-        ellipse(0,0,this.r,this.r);
+        ellipse(0, 0, this.r);
         pop();
     }
 
-};
+}
